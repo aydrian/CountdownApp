@@ -8,9 +8,9 @@ import moment from 'moment';
 
 export default class Row extends Component {
   render() {
-    const now = moment();
+    const now = moment().startOf('date');
     const date = moment(this.props.date);
-    const count = date.diff(now, 'days')
+    const count = date.diff(now, 'days');
     return (
       <View style={styles.container}>
         <View style={styles.categoryWrapper}>
